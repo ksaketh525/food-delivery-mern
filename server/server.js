@@ -25,9 +25,20 @@ app.use('/api/restaurants', require('./routes/restaurantRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 
-app.get('/', (req, res) => {
-  res.send('Food Delivery API is running...');
-});
+if (process.env.NODE_ENV === 'production') {
+  // Serve the static files from the React Vite build
+  app.use(express.static(path.join(__dirname, '../client/dist')));
+
+  // Catch-all route: Send every other request to the React app
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
+  });
+} else {
+  // Fallback for local development
+  app.get('/', (req, res) => {
+    res.send('Food Delivery API is running locally...');
+  });
+}
 
 // Start Server
 const PORT = process.env.PORT || 5000;
