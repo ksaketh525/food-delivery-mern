@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/dist')));
 
   // Catch-all route: Send every other request to the React app
-  app.get('/(.*)/', (req, res) => {
+  app.get('/*catchall', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
   });
 } else {
