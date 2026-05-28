@@ -58,7 +58,7 @@ const RestaurantMenu = () => {
             <div key={item._id} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-xl font-bold text-gray-900">{item.name}</h3>
-                <span className="text-lg font-black text-brand">${item.price.toFixed(2)}</span>
+                <span className="text-lg font-black text-brand">Rs.{item.price.toFixed(2)}</span>
               </div>
               <span className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 block">
                 {item.category || "Main Course"}

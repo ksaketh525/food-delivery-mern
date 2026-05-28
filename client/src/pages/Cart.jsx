@@ -63,10 +63,10 @@ const Cart = () => {
               <div key={item._id} className="flex justify-between items-center py-5 border-b last:border-0 border-gray-50">
                 <div>
                   <h3 className="text-lg font-bold text-gray-900">{item.name}</h3>
-                  <p className="text-gray-500 font-medium">${item.price.toFixed(2)} x {item.qty}</p>
+                  <p className="text-gray-500 font-medium">Rs.{item.price.toFixed(2)} x {item.qty}</p>
                 </div>
                 <div className="flex items-center space-x-6">
-                  <span className="font-black text-xl text-gray-900">${(item.price * item.qty).toFixed(2)}</span>
+                  <span className="font-black text-xl text-gray-900">Rs.{(item.price * item.qty).toFixed(2)}</span>
                   <button onClick={() => removeFromCart(item._id)} className="bg-red-50 text-red-500 w-10 h-10 rounded-full font-black hover:bg-red-100 transition-colors flex items-center justify-center">
                     ✕
                   </button>
@@ -94,7 +94,7 @@ const Cart = () => {
             
             <div className="flex justify-between mb-4 text-gray-500 font-medium">
               <span>Subtotal</span>
-              <span>${cartTotal.toFixed(2)}</span>
+              <span>INR{cartTotal.toFixed(2)}</span>
             </div>
             
             <div className="flex justify-between mb-6 text-gray-500 font-medium border-b border-gray-100 pb-6">
@@ -104,7 +104,7 @@ const Cart = () => {
             
             <div className="flex justify-between items-center mb-8">
               <span className="text-xl font-bold text-gray-900">Total</span>
-              <span className="text-3xl font-black text-red-600">${cartTotal.toFixed(2)}</span>
+              <span className="text-3xl font-black text-red-600">INR{cartTotal.toFixed(2)}</span>
             </div>
 
             {user ? (

@@ -146,7 +146,7 @@ const AdminDashboard = () => {
                 <input type="text" className="w-full bg-gray-50 border p-2.5 rounded-xl" value={foodName} onChange={(e) => setFoodName(e.target.value)} required />
               </div>
               <div>
-                <label className="block text-gray-700 text-sm font-semibold mb-1">Price ($)</label>
+                <label className="block text-gray-700 text-sm font-semibold mb-1">Price (INR)</label>
                 <input type="number" step="0.01" className="w-full bg-gray-50 border p-2.5 rounded-xl" value={foodPrice} onChange={(e) => setFoodPrice(e.target.value)} required />
               </div>
             </div>
@@ -188,7 +188,7 @@ const AdminDashboard = () => {
                     <div className="text-sm font-bold text-gray-900">{order.user?.name || 'Unknown'}</div>
                     <div className="text-xs text-gray-500">{order.deliveryAddress}</div>
                   </td>
-                  <td className="p-4 text-sm font-bold text-green-600">${order.totalPrice.toFixed(2)}</td>
+                  <td className="p-4 text-sm font-bold text-green-600">INR{order.totalPrice.toFixed(2)}</td>
                   <td className="p-4">
                     <select 
                       className="text-sm font-bold px-3 py-1.5 rounded-full outline-none cursor-pointer border bg-white"
