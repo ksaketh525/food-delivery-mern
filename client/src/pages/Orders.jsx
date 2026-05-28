@@ -57,7 +57,7 @@ const Orders = () => {
                   `}>
                     {order.status}
                   </span>
-                  <p className="font-black text-2xl text-gray-900">INR{order.totalPrice.toFixed(2)}</p>
+                  <p className="font-black text-2xl text-gray-900">INR {order.totalPrice.toFixed(2)}</p>
                 </div>
               </div>
               

@@ -94,7 +94,7 @@ const Cart = () => {
             
             <div className="flex justify-between mb-4 text-gray-500 font-medium">
               <span>Subtotal</span>
-              <span>INR{cartTotal.toFixed(2)}</span>
+              <span>INR {cartTotal.toFixed(2)}</span>
             </div>
             
             <div className="flex justify-between mb-6 text-gray-500 font-medium border-b border-gray-100 pb-6">
@@ -104,7 +104,7 @@ const Cart = () => {
             
             <div className="flex justify-between items-center mb-8">
               <span className="text-xl font-bold text-gray-900">Total</span>
-              <span className="text-3xl font-black text-red-600">INR{cartTotal.toFixed(2)}</span>
+              <span className="text-3xl font-black text-red-600">INR {cartTotal.toFixed(2)}</span>
             </div>
 
             {user ? (

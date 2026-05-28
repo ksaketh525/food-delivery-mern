@@ -188,7 +188,7 @@ const AdminDashboard = () => {
                     <div className="text-sm font-bold text-gray-900">{order.user?.name || 'Unknown'}</div>
                     <div className="text-xs text-gray-500">{order.deliveryAddress}</div>
                   </td>
-                  <td className="p-4 text-sm font-bold text-green-600">INR{order.totalPrice.toFixed(2)}</td>
+                  <td className="p-4 text-sm font-bold text-green-600">INR {order.totalPrice.toFixed(2)}</td>
                   <td className="p-4">
                     <select 
                       className="text-sm font-bold px-3 py-1.5 rounded-full outline-none cursor-pointer border bg-white"
